@@ -309,6 +309,7 @@ impl Encoding for f64 {
 pub trait Real: Copy + Neg<Output = Self> + Num + PartialOrd + Signed {
     const E: Self;
     const PI: Self;
+    const TAU: Self;
     const FRAC_1_PI: Self;
     const FRAC_2_PI: Self;
     const FRAC_2_SQRT_PI: Self;
@@ -437,6 +438,7 @@ macro_rules! impl_primitive {
             //       constants of the primitive types.
             const E: Self = core::$t::consts::E;
             const PI: Self = core::$t::consts::PI;
+            const TAU: Self = core::$t::consts::TAU;
             const FRAC_1_PI: Self = core::$t::consts::FRAC_1_PI;
             const FRAC_2_PI: Self = core::$t::consts::FRAC_2_PI;
             const FRAC_2_SQRT_PI: Self = core::$t::consts::FRAC_2_SQRT_PI;

@@ -1163,6 +1163,7 @@ where
 {
     const E: Self = Proxy::new_unchecked(Real::E);
     const PI: Self = Proxy::new_unchecked(Real::PI);
+    const TAU: Self = Proxy::new_unchecked(Real::TAU);
     const FRAC_1_PI: Self = Proxy::new_unchecked(Real::FRAC_1_PI);
     const FRAC_2_PI: Self = Proxy::new_unchecked(Real::FRAC_2_PI);
     const FRAC_2_SQRT_PI: Self = Proxy::new_unchecked(Real::FRAC_2_SQRT_PI);
