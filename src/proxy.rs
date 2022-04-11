@@ -70,11 +70,11 @@ use crate::{
 pub struct Proxy<T, P> {
     inner: T,
     #[cfg_attr(feature = "serialize-serde", serde(skip))]
-    phantom: PhantomData<*const P>,
+    phantom: PhantomData<P>,
 }
 
 impl<T, P> Proxy<T, P> {
-    const fn new_unchecked(inner: T) -> Self {
+    pub const fn new_unchecked(inner: T) -> Self {
         Proxy {
             inner,
             phantom: PhantomData,

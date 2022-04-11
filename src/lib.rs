@@ -94,6 +94,8 @@ pub mod cmp;
 mod constraint;
 pub mod hash;
 mod proxy;
+#[cfg(feature = "simba")]
+mod simba;
 
 use crate::cmp::IntrinsicOrd;
 use crate::constraint::{FiniteConstraint, NotNanConstraint, UnitConstraint};
